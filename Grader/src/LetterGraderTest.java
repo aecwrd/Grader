@@ -12,12 +12,17 @@ public class LetterGraderTest {
         assertEquals(4, letterGrader.add(2, 2)); 
     }
 
+    @Test
+    public void threePlusTwoShouldEqualFour() {
+        assertEquals(5, letterGrader.add(3, 2));
+    }
+
     // Grader Test Cases
     @Test
     public void zeroShouldReturnIlegalArgumentException() {
         assertThrows(IllegalArgumentException.class,
             () -> {
-                letterGrader.determineLetterGrade(-1);
+                letterGrader.determineLetterGrade(-10);
             });
     }
 
